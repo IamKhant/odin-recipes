@@ -1,0 +1,155 @@
+/* Modern Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e67e22;
+  /* Carrot orange */
+  --secondary-color: #d35400;
+  /* Pumpkin orange */
+  --text-color: #2c3e50;
+  /* Dark blue/gray */
+  --bg-color: #fcefe6;
+  /* Very light orange/cream */
+  --card-bg: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Georgia', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout */
+.main-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Images */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.recipe-image:hover {
+  transform: scale(1.02);
+}
+
+/* Sections */
+.recipe-section {
+  margin-bottom: 30px;
+}
+
+.ingredients-list,
+.steps-list,
+.recipes_list {
+  padding-left: 20px;
+}
+
+.ingredients-list li,
+.steps-list li,
+.recipes_list li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Lists Styling */
+.recipes_list {
+  list-style: none;
+  /* Remove default styling */
+  padding: 0;
+}
+
+.recipes_list li {
+  background-color: var(--bg-color);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.recipes_list li:hover {
+  background-color: #fff0db;
+  /* Slightly darker cream */
+  cursor: pointer;
+}
+
+.recipes_list a {
+  color: var(--secondary-color);
+  font-weight: bold;
+  display: block;
+  /* Make the whole list item clickable area if possible, but here specific to anchor */
+}
+
+/* Back Link Button */
+.back-link {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: var(--font-heading);
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-link:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
